@@ -40,11 +40,43 @@
     width: 100%;
   }
 
-  .pricing-table__title {
+  .pricing-table__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
     margin: 0 0 24px;
+    flex-wrap: wrap;
+  }
+
+  .pricing-table__title {
+    margin: 0;
     font-size: 20px;
     font-weight: 700;
     color: var(--color-text-primary);
+  }
+
+  .pricing-table__account-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 20px;
+    background: var(--color-white);
+    color: var(--color-text-primary);
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid var(--color-text-primary);
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    white-space: nowrap;
+    transition: background-color 0.15s ease;
+  }
+
+  .pricing-table__account-button:hover {
+    background: #f0f0f0;
   }
 
   .cards-row {
@@ -187,7 +219,10 @@
 <body>
 
 <section class="pricing-table">
-  <h1 class="pricing-table__title">Selecione o melhor plano para sua loja virtual</h1>
+  <div class="pricing-table__header">
+    <h1 class="pricing-table__title">Selecione o melhor plano para sua loja virtual</h1>
+    <button class="pricing-table__account-button" type="button">Consulte sua conta</button>
+  </div>
 
   <div class="cards-row">
 
